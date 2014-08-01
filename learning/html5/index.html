@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057) -->
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>JnS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<style>
+			#login {
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				position: absolute
+			}
+		</style>
+		<script>
+			clickHandler = function(cmd) {
+				window.location = "day" + cmd + "/index.html"
+			}
+			
+			checkPassword = function()
+			{
+				if(document.getElementById("passwd").value === "tlabs")
+				{
+					document.getElementById("login").style.display = "none";
+				} 
+				else
+				{
+					alert("invalid password")
+					window.location ="https://www.google.com/"
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="login">
+				<input id="passwd" type="password" />
+				<button onclick="checkPassword()"> SUBMIT</button>
+		</div>
+
+		<div id="activity">
+			<h1> DAY WISE UPDATE</h1>
+			<hr />
+			<button onclick="clickHandler(1)">
+				DAY 1 : Introduction to HTML5
+			</button>
+			<hr />
+			<button onclick="clickHandler(2)">
+				DAY 2 : Knowing Canvas
+			</button>
+			<hr />
+			<button onclick="clickHandler(3)">
+				DAY 3 : Knowing Form Elements
+			</button>
+			<hr />
+			<button onclick="clickHandler(4)">
+				DAY 4 : Storage
+			</button>
+			<hr />
+			<button onclick="clickHandler(5)">
+				DAY 5 : Media [Audio|Video]
+			</button>
+            <hr />
+			<button onclick="clickHandler(6)">
+				DAY 6 : Application Cache
+			</button>
+			<hr />
+			<button onclick="clickHandler(10)">
+				DAY 10 : Web Workers
+			</button>
+			<hr />
+			<button onclick="clickHandler(11)">
+				DAY 11 : Web Sockets
+			</button>
+			<button onclick="clickHandler(12)">
+				DAY 12 : Web Site
+			</button>
+			<button onclick="clickHandler(13)">
+				DAY 13 : CSS3 and *
+			</button>
+			<button onclick="clickHandler(14)">
+				DAY 14 : HTML5 Canvas Game
+			</button>
+		</div>
+	</body>
+</html>
